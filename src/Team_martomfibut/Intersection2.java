@@ -24,6 +24,18 @@ public class Intersection2 {
         green.SetValue("green");
         pn.ConstantPlaceList.add(green);
 
+        DataString red = new DataString();
+        red.Printable = false;
+        red.SetName("red");
+        red.SetValue("red");
+        pn.ConstantPlaceList.add(red);
+
+        DataString full = new DataString();
+        full.Printable = false;
+        full.SetName("full");
+        full.SetValue("full");
+        pn.ConstantPlaceList.add(full);
+
         // -------------------------------------------------------------------
         // -------------------------------Lane1--------------------------------
         // --------------------------------------------------------------------
@@ -39,6 +51,7 @@ public class Intersection2 {
 
         DataString p3 = new DataString();
         p3.SetName("P_TL1");
+        p3.Value = "red";
         pn.PlaceList.add(p3);
 
         DataCar p4 = new DataCar();
@@ -47,7 +60,7 @@ public class Intersection2 {
 
         DataTransfer OP1 = new DataTransfer();
         OP1.SetName("OP1");
-        OP1.Value = new TransferOperation("localhost", "1081", "in1");
+        OP1.Value = new TransferOperation("localhost", "1083", "in1");
         pn.PlaceList.add(OP1);
 
         // -------------------------------------------------------------------------------------
@@ -65,6 +78,7 @@ public class Intersection2 {
 
         DataString p7 = new DataString(); //p7.Printable = false;
         p7.SetName("P_TL2");
+        p7.Value = "red";
         pn.PlaceList.add(p7);
 
         DataCar p8 = new DataCar(); //p8.Printable = false;
@@ -73,7 +87,7 @@ public class Intersection2 {
 
         DataTransfer OP2 = new DataTransfer();
         OP2.SetName("OP2");
-        OP2.Value = new TransferOperation("localhost", "1082", "in2");
+        OP2.Value = new TransferOperation("localhost", "1083", "in2");
         pn.PlaceList.add(OP2);
 
         // -------------------------------------------------------------------------------------
@@ -91,6 +105,7 @@ public class Intersection2 {
 
         DataString p11 = new DataString(); //p11.Printable = false;
         p11.SetName("P_TL3");
+        p11.Value = "red";
         pn.PlaceList.add(p11);
 
         DataCar p12 = new DataCar(); //p12.Printable = false;
@@ -117,6 +132,7 @@ public class Intersection2 {
 
         DataString p15 = new DataString();
         p15.SetName("P_TL4");
+        p15.Value = "red";
         pn.PlaceList.add(p15);
 
         DataCar p16 = new DataCar();
@@ -125,7 +141,7 @@ public class Intersection2 {
 
         DataTransfer OP4 = new DataTransfer();
         OP4.SetName("OP4");
-        OP4.Value = new TransferOperation("localhost", "1084", "in4");
+        OP4.Value = new TransferOperation("localhost", "1083", "in4");
         pn.PlaceList.add(OP4);
 
         // ----------------------------------------------------------------------------
@@ -213,7 +229,6 @@ public class Intersection2 {
         t2.InputPlaceName.add("P_TL1");
 
         Condition T2Ct1 = new Condition(t2, "P_TL1", TransitionCondition.Equal, "green");
-
         Condition T2Ct2 = new Condition(t2, "P_x1", TransitionCondition.HaveCar);
         T2Ct1.SetNextCondition(LogicConnector.AND, T2Ct2);
 

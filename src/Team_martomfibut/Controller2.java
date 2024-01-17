@@ -1,6 +1,7 @@
 package Team_martomfibut;
 
 import Components.*;
+import DataObjects.DataInteger;
 import DataObjects.DataString;
 import DataObjects.DataTransfer;
 import DataOnly.TransferOperation;
@@ -38,6 +39,16 @@ public class Controller2 {
         yellow.SetName("yellow");
         yellow.SetValue("yellow");
         pn.ConstantPlaceList.add(yellow);
+
+        DataInteger Five = new DataInteger();
+        Five.SetName("Five");
+        Five.SetValue(5);
+        pn.ConstantPlaceList.add(Five);
+
+        DataInteger Ten = new DataInteger();
+        Ten.SetName("Ten");
+        Ten.SetValue(10);
+        pn.ConstantPlaceList.add(Ten);
 
         DataString p1 = new DataString();
         p1.SetName("r1r2r3r4");

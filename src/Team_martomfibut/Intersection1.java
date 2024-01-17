@@ -24,6 +24,12 @@ public class Intersection1 {
         green.SetValue("green");
         pn.ConstantPlaceList.add(green);
 
+        DataString full = new DataString();
+        full.Printable = false;
+        full.SetName("full");
+        full.SetValue("full");
+        pn.ConstantPlaceList.add(full);
+
         // -------------------------------------------------------------------
         // -------------------------------Lane1--------------------------------
         // --------------------------------------------------------------------
